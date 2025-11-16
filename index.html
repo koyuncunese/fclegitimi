@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaratıcı Teknolojiler: Web 2.0, Yapay Zeka ve Eğitim Araçları</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Özel Tailwind Yapılandırması ve Stiller */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-dark': '#1a202c', /* Koyu ana renk */
+                        'accent-blue': '#4f46e5', /* Vurgu mavisi */
+                        'accent-purple': '#a855f7', /* Vurgu moru */
+                    }
+                }
+            }
+        }
+        /* Genel Arka Plan ve Animasyonlar */
+        body {
+            background-color: #0d1117; /* GitHub/VSCode Koyu Arka Planı */
+            color: #e5e7eb; /* Açık metin */
+        }
+        .tool-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.3), 0 4px 6px -4px rgba(168, 85, 247, 0.3);
+            border-color: #a855f7;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-image: linear-gradient(to right, #a855f7, #4f46e5);
+            margin-top: 8px;
+            border-radius: 9999px;
+        }
+        /* Dinamik Navigasyon Stili */
+        .nav-link.active {
+            color: #a855f7;
+            border-bottom: 2px solid #a855f7;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-primary-dark/90 backdrop-blur-sm shadow-xl border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-extrabold text-white">TECH</span>
+                    <span class="text-2xl font-extrabold text-accent-purple ml-0.5">HUB</span>
+                </a>
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                    <a href="#web20" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition duration-150">Web 2.0</a>
+                    <a href="#ai-tools" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition duration-150">Yapay Zeka</a>
+                    <a href="#meb-kit" class="nav-link text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition duration-150">Eğitim & Kodlama</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Ana İçerik -->
+    <main class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Başlık Alanı -->
+            <header class="text-center mb-16 pt-10">
+                <h1 class="text-5xl font-extrabold tracking-tight sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-accent-purple to-accent-blue">
+                    Yaratıcı Teknolojiler Merkezi
+                </h1>
+                <p class="mt-4 text-xl text-gray-400">
+                    Bilişim Teknolojileri Öğretmenleri için Dinamik Kaynaklar: Etkileşim, Ücretsiz Yapay Zeka ve Uygulamalı Kodlama.
+                </p>
+                <a href="#web20" class="mt-8 inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-accent-purple hover:bg-purple-700 transition duration-300 transform hover:scale-105">
+                    Araçları Keşfet
+                    <!-- İkon (lucide:arrow-right) -->
+                    <svg class="ml-2 -mr-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+            </header>
+
+            <!-- Bölüm 1: Web 2.0 Araçları -->
+            <section id="web20" class="mb-24 pt-16">
+                <h2 class="section-title text-3xl font-bold mb-10 text-white">Web 2.0 Araçları</h2>
+                <p class="text-gray-400 mb-8 max-w-3xl">Etkileşimli dersler, eğlenceli değerlendirmeler ve işbirlikçi projeler için vazgeçilmez dijital araçlar.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Kart 1: Canva -->
+                    <div class="tool-card p-6 bg-gray-800 rounded-xl border border-gray-700">
+                        <h3 class="text-xl font-semibold mb-2 text-purple-400">Canva <span class="text-xs text-gray-500 ml-2">(Görsel Tasarım)</span></h3>
+                        <p class="text-gray-400 mb-4">Poster, sunum, sosyal medya grafikleri ve daha fazlasını kolayca tasarlayın. Öğrenci projeleri için idealdir.</p>
+                        <a href="https://www.canva.com/" target="_blank" class="text-sm font-medium text-accent-blue hover:text-purple-400">Canva'ya Git &rarr;</a>
+                    </div>
+                    <!-- Kart 2: Kahoot! -->
+                    <div class="tool-card p-6 bg-gray-800 rounded-xl border border-gray-700">
+                        <h3 class="text-xl font-semibold mb-2 text-purple-400">Kahoot! <span class="text-xs text-gray-500 ml-2">(Değerlendirme)</span></h3>
+                        <p class="text-gray-400 mb-4">Oyun tabanlı öğrenme platformu. Bilgi yarışmaları oluşturarak dersleri eğlenceli hale getirin.</p>
+                        <a href="https://kahoot.com/" target="_blank" class="text-sm font-medium text-accent-blue hover:text-purple-400">Kahoot!'a Git &rarr;</a>
+                    </div>
+                    <!-- Kart 3: Padlet -->
+                    <div class="tool-card p-6 bg-gray-800 rounded-xl border border-gray-700">
+                        <h3 class="text-xl font-semibold mb-2 text-purple-400">Padlet <span class="text-xs text-gray-500 ml-2">(İşbirliği)</span></h3>
+                        <p class="text-gray-400 mb-4">Sanal bir bülten panosu. Öğrencilerin fikirlerini, görsellerini ve videolarını anlık paylaşmasını sağlar.</p>
+                        <a href="https://padlet.com/" target="_blank" class="text-sm font-medium text-accent-blue hover:text-purple-400">Padlet'e Git &rarr;</a>
+                    </div>
+                    <!-- Kart 4: Quizizz -->
+                    <div class="tool-card p-6 bg-gray-800 rounded-xl border border-gray-700">
+                        <h3 class="text-xl font-semibold mb-2 text-purple-400">Quizizz <span class="text-xs text-gray-500 ml-2">(Ödev & Sınav)</span></h3>
+                        <p class="text-gray-400 mb-4">Öğrencilerin kendi hızlarında ilerleyebildiği eğlenceli quizler oluşturun ve performanslarını takip edin.</p>
+                        <a href="https://quizizz.com/" target="_blank" class="text-sm font-medium text-accent-blue hover:text-purple-400">Quizizz'e Git &rarr;</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bölüm 2: Etkileşimli Ücretsiz Yapay Zeka Araçları -->
+            <section id="ai-tools" class="mb-24 pt-16">
+                <h2 class="section-title text-3xl font-bold mb-10 text-white">Ücretsiz Yapay Zeka Araçları</h2>
+                <p class="text-gray-400 mb-8 max-w-3xl">Görsel, ses ve video oluşturarak yaratıcılığı tetikleyen, ücretsiz ve kullanımı kolay yapay zeka platformları.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Kart 1: Görsel Oluşturma (Stable Diffusion / DALL-E - Genel Tanıtım) -->
+                    <div class="tool-card p-6 bg-gray-800 rounded-xl border border-gray-700">
+                        <h3 class="text-xl font-semibold mb-2 text-pink-400">Görsel Üreticiler (Image AI) <span class="text-xs text-gray-500 ml-2">(Sanat & Tasarım)</span></h3>
+                        <p class="text-gray-400 mb-4">Metin girdilerinizle saniyeler içinde benzersiz görseller oluşturun. Öğrencilerin soyut fikirleri somutlaştırması için harika.</p>
+                        <a href="https://openai.com/dall-e" target="_blank" class="text-sm font-medium text-accent-blue hover:text-pink-400">Örnek Araçlara Bak &rarr;</a>
+                    </div>
+                    <!-- Kart 2: Ses/Müzik Oluşturma (AIVA / Suno - Genel Tanıtım) -->
+                    <div class="tool-card p-6 bg-gray-800 rounded-xl border border-gray-700">
+                        <h3 class="text-xl font-semibold mb-2 text-pink-400">Ses & Müzik Üreticiler <span class="text-xs text-gray-500 ml-2">(Podcast & Arka Plan)</span></h3>
+                        <p class="text-gray-400 mb-4">Yazılı metinleri seslendirin veya projelere özgü telifsiz müzikler oluşturun. (Örn: ElevenLabs, Suno)</p>
+                        <a href="https://app.suno.ai/" target="_blank" class="text-sm font-medium text-accent-blue hover:text-pink-400">Örnek Araçlara Bak &rarr;</a>
+                    </div>
+                    <!-- Kart 3: Video Oluşturma (InVideo / Lumen5 - Genel Tanıtım) -->
+                    <div class="tool-card p-6 bg-gray-800 rounded-xl border border-gray-700">
+                        <h3 class="text-xl font-semibold mb-2 text-pink-400">Video Üreticiler <span class="text-xs text-gray-500 ml-2">(Sunum & Anlatım)</span></h3>
+                        <p class="text-gray-400 mb-4">Makale veya sunum metinlerinden otomatik olarak kısa, ilgi çekici videolar oluşturun.</p>
+                        <a href="https://www.lumen5.com/" target="_blank" class="text-sm font-medium text-accent-blue hover:text-pink-400">Örnek Araçlara Bak &rarr;</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bölüm 3: MEB-KIT ve Basit Uygulamalar -->
+            <section id="meb-kit" class="pt-16">
+                <h2 class="section-title text-3xl font-bold mb-10 text-white">Eğitim ve Kodlamaya Giriş</h2>
+                <p class="text-gray-400 mb-8 max-w-3xl">5. ve 6. sınıf Bilişim Teknolojileri derslerine uygun, temel kodlama mantığını öğreten ve MEB müfredatını destekleyen araçlar.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Kart 1: Scratch -->
+                    <div class="tool-card p-6 bg-gray-800 rounded-xl border border-gray-700">
+                        <h3 class="text-xl font-semibold mb-2 text-green-400">Scratch <span class="text-xs text-gray-500 ml-2">(Blok Kodlama)</span></h3>
+                        <p class="text-gray-400 mb-4">Animasyon, hikaye ve oyun geliştirme için mükemmel, blok tabanlı görsel programlama dili. 5. ve 6. sınıflar için temel araçtır.</p>
+                        <a href="https://scratch.mit.edu/" target="_blank" class="text-sm font-medium text-accent-blue hover:text-green-400">Scratch'e Git &rarr;</a>
+                    </div>
+                    <!-- Kart 2: Code.org -->
+                    <div class="tool-card p-6 bg-gray-800 rounded-xl border border-gray-700">
+                        <h3 class="text-xl font-semibold mb-2 text-green-400">Code.org <span class="text-xs text-gray-500 ml-2">(Bilişimsel Düşünme)</span></h3>
+                        <p class="text-gray-400 mb-4">Bilişimsel düşünme becerilerini geliştiren, oyunlaştırılmış ve müfredata uygun kodlama etkinlikleri sunar.</p>
+                        <a href="https://code.org/" target="_blank" class="text-sm font-medium text-accent-blue hover:text-green-400">Code.org'a Git &rarr;</a>
+                    </div>
+                    <!-- Kart 3: MEB-KIT (Genel Tanıtım/Uygulama) -->
+                    <div class="tool-card p-6 bg-gray-800 rounded-xl border border-gray-700">
+                        <h3 class="text-xl font-semibold mb-2 text-green-400">MEB-KIT & Temel Uygulamalar <span class="text-xs text-gray-500 ml-2">(Müfredat Desteği)</span></h3>
+                        <p class="text-gray-400 mb-4">Millî Eğitim Bakanlığı'nın ders içeriği ve kitlerini destekleyen, basit mobil veya web uygulamalarına odaklanma.</p>
+                        <a href="https://e-okul.meb.gov.tr/" target="_blank" class="text-sm font-medium text-accent-blue hover:text-green-400">MEB Kaynakları &rarr;</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary-dark border-t border-gray-700 mt-16 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+            <p>&copy; 2025 Tech Hub - Bilişim Teknolojileri Kaynak Merkezi. Dinamik İçerik, Yaratıcı Eğitim.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Dynamic Effects (Scroll, Active Nav) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+
+            // Navigasyon Bağlantılarının Aktif Durumunu Ayarlama
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5 // Bölümün yarısı görünür olduğunda aktif say
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Tüm linklerden 'active' sınıfını kaldır
+                        navLinks.forEach(link => link.classList.remove('active'));
+
+                        // Görünür olan bölümün ID'sine eşleşen linke 'active' sınıfını ekle
+                        const targetId = entry.target.id;
+                        const activeLink = document.querySelector(`.nav-link[href="#${targetId}"]`);
+                        if (activeLink) {
+                            activeLink.classList.add('active');
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+            
+            // Başlangıçta ilk bölümü aktif yap
+            if (sections.length > 0) {
+                 const firstLink = document.querySelector(`.nav-link[href="#${sections[0].id}"]`);
+                 if (firstLink) {
+                     firstLink.classList.add('active');
+                 }
+            }
+
+            // Smooth Scroll (Yumuşak Kaydırma)
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
